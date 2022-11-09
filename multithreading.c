@@ -39,6 +39,7 @@ void	multithreading(int64_t board, int level, int id)
 void	*multiQueen(void *vargp)
 {
 	int *myId = (int *)vargp;
+	
 	multithreading(0, 0, *myId);
 	return NULL;
 }

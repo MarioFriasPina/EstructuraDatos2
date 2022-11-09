@@ -1,4 +1,5 @@
 #include "structures.h"
+#define THREADS 8
 
 //Imprime el estado actual del tablero a la consola
 void    print_board(int64_t board, FILE *fd)
@@ -22,15 +23,22 @@ void    print_board(int64_t board, FILE *fd)
 int		main(void)
 {
 	int			i;
+	int			id[THREADS];
 	pthread_t	tid;
-	clock_t		begin = clock(), end;
+	clock_t		begin, end;
 
-	for(i = 0; i < 9; i++)
-		pthread_create(&tid, NULL, multiQueen, (void *)&i);
+	remove("multi.txt");
+	begin = clock();
+	for(i = 0; i < THREADS; ++i)
+	{
+		id[i] = i;
+		pthread_create(&tid, NULL, multiQueen, (void *)&id[i]);
+	}
 
 	end = clock();
 	printf("Multithreaded = %f seconds\n", (double)(end-begin) / CLOCKS_PER_SEC);
 
+	remove("brute.txt");
 	begin = clock();
 
 	brute_force(0, 0);
