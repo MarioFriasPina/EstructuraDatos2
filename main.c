@@ -37,7 +37,7 @@ int		main(void)
 	}
 
 	end = clock();
-	printf("Multithreaded = %f seconds\n", (double)(end-begin) / CLOCKS_PER_SEC);
+	printf("%sMultithreaded = %f seconds\n%s", CYN, (double)(end-begin) / CLOCKS_PER_SEC, END);
 
 	remove("brute.txt");
 	begin = clock();
@@ -45,6 +45,6 @@ int		main(void)
 	brute_force(0, 0);
 	
 	end = clock();
-	printf("Brute Force = %f seconds\n", (double)(end-begin) / CLOCKS_PER_SEC);
+	printf("%sBrute Force = %f seconds\n%s", MAG, (double)(end-begin) / CLOCKS_PER_SEC, END);
 	return 0;
 }
