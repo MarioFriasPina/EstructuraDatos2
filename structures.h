@@ -2,10 +2,10 @@
 # define STRUCTURES_H
 
 #include <stdio.h>
-#include <stdlib.h>
+//#include <stdlib.h>
 #include <stdint.h>
 #include <time.h>
-#include <math.h>
+//#include <math.h>
 #include <pthread.h>
 
 # define RED	"\x1B[31m"

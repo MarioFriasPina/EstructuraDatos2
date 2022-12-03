@@ -6,15 +6,16 @@ void    print_board(int64_t board, FILE *fd)
 {
 	int64_t c = 1;
 	char    i = 0;
-
+	
+	fprintf(fd, "---------------------------------\n");
 	for (i = 0; i < 64; i++)
 	{
 		if (board & c)
-			fprintf(fd, "Q");
+			fprintf(fd, "| %sQ%s ", GRN, END);
 		else
-			fprintf(fd, "0");
+			fprintf(fd, "|   ");
 		if (i % 8 == 7)
-			fprintf(fd, "\n");
+			fprintf(fd, "|\n---------------------------------\n");
 		c = c << 1;
 	}
 	fprintf(fd, "\n");
