@@ -71,3 +71,11 @@ Imprimimos los resultados de nuestros algoritmos en 2 archivos diferentes: brute
 
 ### Ejemplo de un archivo creado por el algoritmo
 ![File](https://user-images.githubusercontent.com/93450752/205466625-97c3b0d1-0763-4bb0-b60a-cb0aafd3f2b5.png)
+
+--------------
+
+> Andrea Alexandra Barrón Córdova A01783126
+>
+> Alan Anthony Hernández Pérez A01783347
+>
+> Mario Ignacio Frias Pina A01782559
